@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
+//import logo from './logo.svg';
+import ProductsTable from './Comtable';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const products = [
+  {name:'Frozen yoghurt',price : 159.15, category : "aa"},
+  {name :'Frozen yoghurt',price : 159.15, category : "aa"},
+  {name :'Frozen yoghurt',price : 159.15, category : "aa"},
+  {name :'Frozen yoghurt',price : 159.15, category : "aa"},
+  {name :'Frozen yoghurt',price : 159.15, category : "aa"},
+  
+];
+
+function App(name, price ,category ) {
+  return <div>
+    <ProductsTable products={products}/>
+  </div>;
 }
+
+
+
+
 
 export default App;
